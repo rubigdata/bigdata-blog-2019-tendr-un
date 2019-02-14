@@ -4,7 +4,7 @@
 
 It's valentine's day! Let me just add some stuff about something dear to my heart.
 
-##Doctor Who
+#Doctor Who
 Doctor Who is a tv show from Britain. It originally started in 1963, and it's still running today (though there was a quite big hiatus in the middle there somewhere). 
 I've mostly seen episodes from the 2005 come-back, but Classic Who is quite fun as well. 
 
@@ -14,9 +14,7 @@ I've mostly seen episodes from the 2005 come-back, but Classic Who is quite fun 
 >
 >I’m not trying to *win*. I’m not doing this because I want to beat someone, or because I hate someone, or because I want to blame someone. 
 >
->It’s not because it’s fun. God knows it’s not because it’s easy. 
->
->It’s not even because it works because it hardly ever does.. 
+>It’s not because it’s fun. God knows it’s not because it’s easy. It’s not even because it works because it hardly ever does.. 
 >
 >I do what I do because it's **right**! Because it’s decent! And above all, it’s kind! It’s just that.. Just kind. 
 >
@@ -33,6 +31,7 @@ I've mostly seen episodes from the 2005 come-back, but Classic Who is quite fun 
 >Who I am is where I stand. Where I stand is where I fall. Stand with me. These people are terrified. Maybe we can help a little. 
 >
 >Why not, just at the end, just be kind?
+
 12th Doctor, *The Doctor Falls* 
 
 # So that was a good quote
