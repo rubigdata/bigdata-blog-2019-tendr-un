@@ -3,6 +3,6 @@
 Big Data 2019: Blog posts by tendr-un
 =========== 
 
-* [Assignment 1A](https://rubigdata.github.io/bigdata-blog-2019-tendr-un/Assignment1A).
+14 February 2019: [Assignment 1A](https://rubigdata.github.io/bigdata-blog-2019-tendr-un/Assignment1A).
 
-* [Assignment 2](https://rubigdata.github.io/bigdata-blog-2019-tendr-un/assignment2).
+7 March 2019: [Assignment 2](https://rubigdata.github.io/bigdata-blog-2019-tendr-un/assignment2).
