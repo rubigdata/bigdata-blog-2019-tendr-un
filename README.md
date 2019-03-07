@@ -9,7 +9,7 @@ Blog Repository
 
 As I believe you need certain permissions to view these files, Assignment 2 is also posted here in its entirety.
 ##
-Assignment 2
+Assignment 2:
 
 # Hadoop: HDFS and Map Reduce
 
