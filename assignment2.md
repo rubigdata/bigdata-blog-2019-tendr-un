@@ -8,7 +8,7 @@ Before running Map-Reduce, the environment for HDFS had to be prepared.
 * '*sbin/start-dfs.sh*' and '*sbin/stop-dfs.sh*' start and stop the HDFS.
 * '*bin/hdfs dfs*' will preceed filesystem commands when in Hadoop. '*bin/hdfs dfs -mkdir /user*' creates a directory called user.
 * '*bin/hdfs dfs -put etc/hadoop input*' copies the contents in 'etc/hadoop' to the destination 'input'
-* '*bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.9.2.jar grep input output 'dfs[a-z.]+'*' finds and puts the entries from the jar file that match the string into the output file
+* '*bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.9.2.jar grep input output 'dfs[a-z.]+'*' finds and puts the entries from the jar file (hadoop-mapreduce-examples-2.9.2.jar) that match the string into the output file
 
 Counting the number of words using MapReduce
 ============================================
