@@ -17,19 +17,18 @@ An example code for MapReduce was taken from [Hadoop's MapReduce tutorial](https
 
 The mapping function in WordCount is map(Object key, Text value, Context context), and this  function processes each line in the document one at a time, and then makes a key-value pair for each word and the amount of times it encounters that word. A sample of the output from 100.txt/Complete Shakespeare:
  
-> wolfish,	1
->
-> wolves	10
->
-> wolves'	1
-> wolves,	4
-> wolves.	2
+
 > wolvish	2
+>
 > wolvish-ravening	1
+>
 > woman	162
+>
 > woman!	18
+>
 > woman'd.	1
+>
 > woman's	65
 
 
-By using the terminal to count all the occurances of 'Romeo' and 'Juliet' in the output file given by WordCount, I find 313 instances of Romeo, and 206 of Juliet. 
+By using the terminal to count all the occurances of 'Romeo' and 'Juliet' (in different keys) in the output file given by WordCount, I find 313 instances of Romeo, and 206 of Juliet. 
