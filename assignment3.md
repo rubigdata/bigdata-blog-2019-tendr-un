@@ -1,11 +1,12 @@
 # Assignment 3
 
 ## Introduction
-In this blogpost I explain what I have experienced in the context of Spark and RDDs by doing Assignment 3 and following the course, and this I do by explaining a bit about the theory behind it and answering the questions asked in the two notebooks in assignment 3A.
+In this blogpost I present the experiences I have had with Spark and RDDs by doing Assignment 3, and this I do by explaining a bit about the theory behind it and answering the questions asked in the two notebooks in assignment 3A.
 
 ## Spark 
 The idea behind Spark is to use a Resilient Distributed Dataset (RDD), which has partitions to divide the big data into smaller pieces, and distributes them across the nodes in a cluster. It uses parallel operators to manipulate the data in parallel, and will reconstruct intermediate results if there is a failure. 
 
+## The contents of assignment 3A
 In assignment 3A, I was acquainted with notebooks, initializing RDDs with unspecified and specified amounts of partitions using Spark, and what that means for the results. I saw how query processing is affected by the choice of operators, and how they use or don't use partitioners, and I learned that further ways to control the parallelism is with repartition and coalesce-operations.
 
 ## Questions (chronological order)
