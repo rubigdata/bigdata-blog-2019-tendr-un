@@ -29,7 +29,7 @@ The results are
 ![alt text](ass3_b_rddpairs.png "Results rddA and rddB")
 
 rddPairGroup has 8 partitions, and rddPairGroup2 has 2 - because this one was initialized as 
-`val rddPairsPart2 = rddPairs.partitionBy(new HashPartitioner(2))`. 
+`val rddPairsPart2 = rddPairs.partitionBy(new HashPartitioner(2))`. As the notebook explains, the default number of partitions will depend on the number of cores in the machine running docker - the computer I ran this on presumably had 8 cores.
 
 
 
@@ -45,6 +45,7 @@ we get the result:
 The none-partitioner means no partitioner was assigned.
 
 Q: Why are the results different for rddA and rddB? How is query processing affected by the partitioners?
+
 
 Q: Compare the two query plans for rddC and rddD. Can you explain why the second query plan has on less shuffle phase?
 
