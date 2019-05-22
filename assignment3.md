@@ -1,9 +1,9 @@
-## Assignment 3A
+# Assignment 3A
 
-#Introduction
+##Introduction
 Insight into Spark and notebooks
 
-#Questions (chronological order)
+##Questions (chronological order)
 Q: Explain why there are multiple result files.
 We have the result files part-00000 and part-00001. There are two files due to there being two RDD partitions. 
 
@@ -31,6 +31,8 @@ we get the result:
 The none-partitioner means no partitioner was assigned.
 
 Q: Why are the results different for rddA and rddB? How is query processing affected by the partitioners?
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Results rddA and rddB")
 
 Q: Compare the two query plans for rddC and rddD. Can you explain why the second query plan has on less shuffle phase?
 
