@@ -4,27 +4,33 @@
 Insight into Spark and notebooks
 
 ## Questions (chronological order)
-Q: Explain why there are multiple result files.
+**Q: Explain why there are multiple result files.**  
 We have the result files part-00000 and part-00001. There are two files due to there being two RDD partitions. 
 
-Q: why are the counts different?
+**Q: why are the counts different?**   
 The first collect() done on 'Macbeth' gets the result 30. The second gets the result 285. The difference between these is  that some
 preprocessing was made for the second one - 
 
->val words = lines.flatMap(line => line.split(" "))
->              .map(w => w.toLowerCase().replaceAll("(^[^a-z]+|[^a-z]+$)", ""))
->              .filter(_ != "")
->              .map(w => (w,1))
->              .reduceByKey( _ + _ )
+`val words = lines.flatMap(line => line.split(" "))  
+              .map(w => w.toLowerCase().replaceAll("(^[^a-z]+|[^a-z]+$)", ""))  
+              .filter(_ != "")  
+              .map(w => (w,1))  
+
+              .reduceByKey( _ + _ )
+`
 
 so all the Macbeth-variations are counted instead of ones that are exactly and only written as 'Macbeth'. 
 
 
 
-Q: Spot the differences between the results, and try to map what you see on Chapter 2 that we read for the course.
+**Q: Spot the differences between the results, and try to map what you see on Chapter 2 that we read for the course.**  
 The results are 
 
 ![alt text](ass3_b_rddpairs.png "Results rddA and rddB")
+
+rddPairGroup has 8 partitions, and rddPairGroup2 has 2 - because this one was initialized as 
+`val rddPairsPart2 = rddPairs.partitionBy(new HashPartitioner(2))`
+
 
 
 Q: do you understand why the partitioner is none? (No worries if not, you will find a clue below.)
