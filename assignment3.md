@@ -19,6 +19,14 @@ preprocessing was made for the second one -
 
 so all the Macbeth-variations are counted instead of ones that are exactly and only written as 'Macbeth'. 
 
+
+
+Q: Spot the differences between the results, and try to map what you see on Chapter 2 that we read for the course.
+The results are 
+
+![alt text](ass3_b_rddpairs.png "Results rddA and rddB")
+
+
 Q: do you understand why the partitioner is none? (No worries if not, you will find a clue below.)
 When we do the partitionBy(new HashPartitioner(x)) (like we did with val rddPairsPart4 = rddPairs.partitionBy(new HashPartitioner(4))) 
 we get the result:
@@ -31,8 +39,6 @@ we get the result:
 The none-partitioner means no partitioner was assigned.
 
 Q: Why are the results different for rddA and rddB? How is query processing affected by the partitioners?
-
-![alt text](ass3_b_rddpairs.png "Results rddA and rddB")
 
 Q: Compare the two query plans for rddC and rddD. Can you explain why the second query plan has on less shuffle phase?
 
