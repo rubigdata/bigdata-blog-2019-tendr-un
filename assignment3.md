@@ -1,7 +1,10 @@
 # Assignment 3A
 
 ## Introduction
-Insight into Spark and notebooks
+In this blogpost I explain what insights I have gained on Spark by doing Assignment 3 and following the course, and this I do by explaining a the theory behind it and answering the questions asked in the two notebooks.
+
+## Spark 
+The idea behind Spark is to use a Resilient Distributed Dataset (RDD), which has partitions to divide the big data into smaller pieces, and distributes them across the nodes in a cluster. It uses parallel operators to manipulate the data in parallel, and will reconstruct intermediate results if there is a failure. 
 
 ## Questions (chronological order)
 **Q: Explain why there are multiple result files.**  
