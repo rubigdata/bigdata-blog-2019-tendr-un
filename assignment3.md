@@ -33,7 +33,7 @@ rddPairGroup has 8 partitions, and rddPairGroup2 has 2 - because this one was in
 
 
 
-Q: do you understand why the partitioner is none? (No worries if not, you will find a clue below.)
+**Q: do you understand why the partitioner is none? (No worries if not, you will find a clue below.)**  
 When we do the partitionBy(new HashPartitioner(x)) (like we did with val rddPairsPart4 = rddPairs.partitionBy(new HashPartitioner(4))) 
 we get the result:
 
@@ -44,11 +44,9 @@ we get the result:
 
 The none-partitioner means no partitioner was assigned.
 
-Q: Why are the results different for rddA and rddB? How is query processing affected by the partitioners?
+**Q: Why are the results different for rddA and rddB? How is query processing affected by the partitioners?**  
+rddA uses map(), which omits partitioners, and rddB uses mapValues(), an operation which guarantees that the output distribution will carry over an existing partitioner to its result. Query processing will be affected by partitioners if operations that carry those over are used.
 
-
-Q: Compare the two query plans for rddC and rddD. Can you explain why the second query plan has on less shuffle phase?
-
-Summarizing: partitioning depends on the distributed operations that are executed, and only operations with guarantees about the output distribution will carry an existing partitioner over to its result.
-Another way to control the level of parallellism during query execution is to use the repartition and coalesce operations.
+**Q: Compare the two query plans for rddC and rddD. Can you explain why the second query plan has on less shuffle phase?**  
+rddC is defined as a repartition with input 2 done on rddA, and rddD is defined as a coelesce operation done on rddB. coalesce() does not execute a full shuffle, and keeps the partitioner from rddB. repartition() does a full shuffle and creates 2 (=the number specified in the input) output partitions.
 
