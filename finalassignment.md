@@ -70,29 +70,27 @@ Moving on!
 ## Standalone Spark Application
 Step 2 of this project was running our code in a cluster. For that, we had to make a standalone Spark Application. Following the instructions "Running Self Contained Apps on Hathi" worked sort of fine, but it gave a lot of errors as well. I had to do a lot of trial and error to get the `sbt package` to work. The sbt build file as it was gave me a lot of trouble as the packaging kept failing. After a lot of trial and error I ended up adding a library dependency for org.jsoup, and a second %-mark in the last line. You can see it here:
 
-``
-name            := "RUBigDataApp"
-version         := "1.0"
-scalaVersion    := "2.11.12"
-
-val sparkV      = "2.4.1"
-val hadoopV     = "2.7.2"
-val jwatV       = "1.0.0"
-
-resolvers += "jitpack" at "https://jitpack.io"
-
-libraryDependencies ++= Seq(
-  "org.apache.spark" %% "spark-core" % sparkV % "provided",
-  "org.apache.spark" %% "spark-sql"  % sparkV % "provided",
-  "org.apache.hadoop" %  "hadoop-client" % hadoopV % "provided",
-  "org.jwat"          % "jwat-common"    % jwatV,
-  "org.jwat"          % "jwat-warc"      % jwatV,
-  "org.jwat"          % "jwat-gzip"      % jwatV,
-  "org.jsoup"         % "jsoup"          % "1.8.2"
-)
-
-libraryDependencies += "com.github.sara-nl" %% "warcutils" % "-SNAPSHOT"
-``
+> name            := "RUBigDataApp"
+> version         := "1.0"
+> scalaVersion    := "2.11.12"
+>
+> val sparkV      = "2.4.1"
+> val hadoopV     = "2.7.2"
+> val jwatV       = "1.0.0"
+> 
+> resolvers += "jitpack" at "https://jitpack.io"
+> 
+> libraryDependencies ++= Seq(
+>   "org.apache.spark" %% "spark-core" % sparkV % "provided",
+>   "org.apache.spark" %% "spark-sql"  % sparkV % "provided",
+>   "org.apache.hadoop" %  "hadoop-client" % hadoopV % "provided",
+>   "org.jwat"          % "jwat-common"    % jwatV,
+>   "org.jwat"          % "jwat-warc"      % jwatV,
+>   "org.jwat"          % "jwat-gzip"      % jwatV,
+>   "org.jsoup"         % "jsoup"          % "1.8.2"
+> )
+> 
+> libraryDependencies += "com.github.sara-nl" %% "warcutils" % "-SNAPSHOT"
 
 While succinct in this text, I think it took me about seven (7) hours to get the application to work in the end.
 
