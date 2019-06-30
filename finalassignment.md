@@ -62,7 +62,7 @@ Well, there was no time to get fancy with the analysis at this point. Remember t
 
 The result can be seen in the code in the Notebook of course, and I found out that the most mentioned word was (perhaps unsurprisingly) 'the', which occurred 1774 times. 'twitter' was mentioned 119 times. See the toplist in the image below.
 
-![alt text](toplist.png "The top 15 most used words")
+![alt text](top15.png "The top 15 most used words")
 
 Moving on!
 
@@ -99,4 +99,8 @@ While succinct in this text, I think it took me about seven (7) hours to get the
 Running the last two commands, `docker build --rm=true -t rubigdata/spark-app .` and `docker run --rm --name RUBigDataApp -e ENABLE_INIT_DAEMON=false --network spark-net rubigdata/spark-app` gave me the output:
 
 ![alt text](lasttwo.png "Success!")
+
+The localhost (with the spark-master) however, didn't change after I ran it. It might be something to do with Hadoop, as I never managed to get my laptop to run it.
+
+![alt text](localhost.png "Localhost 8080")
 
