@@ -102,3 +102,5 @@ The localhost (with the spark-master) however, didn't change after I ran it. It 
 
 ![alt text](localhost.png "Localhost 8080")
 
+## Logistics
+My .jar file, my .scala file, and the notebook, can all be found in the final assignment repository in the folder final_project.
